@@ -26,20 +26,3 @@ I highly recommend installing [Redux DevTools](https://github.com/gaearon/redux-
 Polyfilled to use the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
 [Browser support](https://github.com/github/fetch#browser-support)
-
-# Production settings
-In files:
-
-```
-webpack.production.config.js
-
-```
-
-Set your build level global `__API__` at line 37.
-
-`__API__: JSON.stringify('YOUR PRODUCTION API URL')`
-
-```
-SERVER_DIR=prod PORT=3000 webpack -p --config webpack.production.config.js
-npm start
-```
