@@ -1,4 +1,7 @@
-import React, {Component} from 'react';
+// NOTE: Header should remain a component and have user data passed in from App
+
+import React, {Component} from 'react'
+import { Link } from 'react-router'
 
 // css
 import './header.css';
@@ -17,7 +20,15 @@ export default class Header extends Component {
 
     render() {
         return (
-            <header className="header">Sample Header</header>
+            <header className="header">
+                <Link to="/applications">Applications</Link>
+                <Link to="/hosts">Hosts</Link>
+                <Link to="/metrics">Metrics</Link>
+                <Link to="/settings">Settings</Link>
+                <Link to="/logs">Logs?</Link>
+                <Link to="/events">Events</Link>
+                <Link to="/permissions">Permissions</Link>
+            </header>
         );
     }
 }

@@ -1,4 +1,4 @@
 export {
-    sampleAction,
-    SAMPLE_ACTION
-} from './sampleActions';
+    deleteApplications,
+    DELETE_APPLICATIONS,
+} from './applications'

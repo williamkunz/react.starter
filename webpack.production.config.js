@@ -37,6 +37,10 @@ module.exports = {
       __API__: JSON.stringify('YOUR PRODUCTION API URL')
     })
   ],
+  resolve: {
+      root: path.resolve(__dirname, 'app'),
+      extensions: ['', '.js', '.jsx']
+  },
   module: {
     loaders: [
       {

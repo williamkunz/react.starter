@@ -16,6 +16,10 @@ class App extends React.Component {
         this.displayName = 'App';
     }
 
+    componentDidMount() {
+      // TODO: App will hold session and user data. Example: is signed in, go to /dash or /setup
+    }
+
     render() {
         const {
             children
@@ -36,7 +40,6 @@ App.propTypes = {
     dispatch: PropTypes.func,
     location: PropTypes.object.isRequired,
     children: PropTypes.object,
-    sampleReducer: PropTypes.object.isRequired
 };
 
 App.contextTypes = {
@@ -45,13 +48,9 @@ App.contextTypes = {
 };
 
 const mapStateToProps = state => {
-    const {
-        sampleReducer
-    } = state;
+    // assumption of an App or Auth reducer
 
-    return {
-        sampleReducer
-    };
+    return {};
 };
 
 export default connect(mapStateToProps)(App);

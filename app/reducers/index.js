@@ -1,14 +1,14 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 
 // Reducers
-import sampleReducer from './sampleReducer';
+import applications from './applications';
 
 // Routing Reducer
-import {routerReducer} from 'react-router-redux';
+import { routerReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
+    applications,
     routing: routerReducer,
-    sampleReducer
 });
 
 export default rootReducer;
